@@ -1,0 +1,101 @@
+.formBody {
+    min-width: 300px;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+
+    border: 1px solid #424242;
+    border-radius: 6px;
+}
+
+label {
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+label::after {
+    content: 'Recommended <= 9';
+
+    position: absolute;
+    right: 0;
+    top: -40%;
+    transform: translate(-70%, 0);
+
+    display: none;
+
+    font-size: 0.6rem;
+}
+
+label:nth-child(2)::after {
+    content: 'Recommended <= 6';
+}
+
+label:nth-child(3)::after {
+    content: 'Recommended > 3';
+}
+
+label:hover::after {
+    display: block;
+}
+
+label:hover span {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+input[type="number"] {
+    width: 70px;
+    padding: 6px;
+
+    font-weight: 100;
+    outline: none;
+    border: 1px solid #424242;
+    border-radius: 6px;
+}
+
+input[type="number"]:focus {
+    color: snow;
+    background-color: #424242;
+}
+
+button[type="submit"] {
+    align-self: flex-end;
+
+    padding: 5px 20px;
+
+    font: inherit;
+
+    outline: none;
+    border: 1px solid #424242;
+    border-radius: inherit;
+    background-color: unset;
+
+    transition: all 0.2s ease-in-out;
+
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    color: snow;
+    background-color: #424242;
+}
+
+button[type="submit"]:active {
+    scale: 0.95;
+}

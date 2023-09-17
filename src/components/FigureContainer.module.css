@@ -1,0 +1,12 @@
+.figureContainer {
+    min-width: 300px;
+    width: 50%;
+    height: 500px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #424242;
+    border-radius: 6px;
+}
